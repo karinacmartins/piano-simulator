@@ -30,7 +30,7 @@ O Piano Virtual é uma aplicação web que permite tocar ou ouvir músicas de fo
 ## 🎶 Como Utilizar
 
 1. **Acessar a Página**:
-   - Acesse a aplicação hospedada clicando [aqui](https://projeto.vercel.app).
+   - Acesse a aplicação hospedada clicando [aqui](https://piano-simulator-two.vercel.app/).
    - Ou abra o arquivo `index.html` localmente no navegador para visualização offline.
 
 2. **Selecionar Música**:
