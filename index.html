@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano Simulator</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/footer.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="icon" href="src/images/favicon.png" type="image/png">
+
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div id="notesDisplay">Selecione uma música para começar.</div>
+    <header>
+
+      <div class="music">
+        <h2>Virtual Piano</h2>
+        <select id="musicSelect">
+          <option value="">Selecione uma música</option>
+        </select>
+        <div>
+          <label>
+            <input type="checkbox" id="autoPlayToggle" />
+            Execução Automática
+          </label>
+        </div>
+      </div>
+
+      <div>
+
+        <div class="column volume-slider">
+          <span>Volume</span> <input type="range" min="0" max="1" value="0.5" step="any">
+        </div>
+
+        <div class="butons">
+          <button id="playButton">Play</button>
+          <button id="stopButton">Stop</button>
+        </div>
+
+      </div>
+
+      <div class="column keys-check">
+        <span>Teclas</span> <input type="checkbox" checked>
+      </div>
+
+    </header>
+    <ul class="piano-keys">
+      <li class="key white" data-key="a"><span>a</span></li>
+      <li class="key black" data-key="w"><span>w</span></li>
+      <li class="key white" data-key="s"><span>s</span></li>
+      <li class="key black" data-key="e"><span>e</span></li>
+      <li class="key white" data-key="d"><span>d</span></li>
+      <li class="key black" data-key="r"><span>r</span></li>
+      <li class="key white" data-key="f"><span>f</span></li>
+      <li class="key black" data-key="t"><span>t</span></li>
+      <li class="key white" data-key="g"><span>g</span></li>
+      <li class="key black" data-key="y"><span>y</span></li>
+      <li class="key white" data-key="h"><span>h</span></li>
+      <li class="key black" data-key="u"><span>u</span></li>
+      <li class="key white" data-key="j"><span>j</span></li>
+      <li class="key black" data-key="i"><span>i</span></li>
+      <li class="key white" data-key="k"><span>k</span></li>
+      <li class="key black" data-key="o"><span>o</span></li>
+      <li class="key white" data-key="l"><span>l</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+        <p>&copy; 2024. KM Todos os direitos reservados.</p>
+        <div class="social">
+            <span>Made with 🤍</span>
+
+            <!-- Link para o Instagram -->
+            <a href="https://www.instagram.com/karinamartins_eu/" target="_blank" aria-label="Instagram de Karina Martins" class="tooltip">
+                <img src="src/images/icons/instagram-round-svgrepo-com.svg" alt="Instagram">
+                <span class="tooltip-text">Instagram</span>
+            </a>
+
+            <!-- Link para o LinkedIn -->
+            <a href="https://www.linkedin.com/in/karinacmartins/" target="_blank" aria-label="LinkedIn de Karina Martins" class="tooltip">
+                <img src="src/images/icons/linkedin-round-svgrepo-com.svg" alt="LinkedIn">
+                <span class="tooltip-text">LinkedIn</span>
+            </a>
+
+            <!-- Link para o GitHub -->
+            <a href="https://github.com/karinacmartins" target="_blank" aria-label="GitHub de Karina Martins" class="tooltip">
+                <img src="src/images/icons/github-round-svgrepo-com.svg" alt="GitHub">
+                <span class="tooltip-text">GitHub</span>
+            </a>
+
+            <!-- Link para o Portfólio -->
+            <a href="https://portfolio-pessoal-mocha.vercel.app/" target="_blank" aria-label="Portfólio de Karina Martins" class="tooltip">
+                <img src="src/images/icons/portifolio.png" alt="Portfólio">
+                <span class="tooltip-text">Portfólio</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+  <script src="./src/scripts/engine.js" defer></script>
+</body>
+
+</html>

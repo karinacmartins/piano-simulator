@@ -1,0 +1,291 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e3f2fd;
+  color: #fff;
+}
+
+.container {
+  width: 880px;
+  border-radius: 20px;
+  padding: 35px 40px;
+  background: linear-gradient(135deg, #000, #121212, #1a1a1a); /* Gradiente mais escuro com brilho suave */
+  box-shadow: 
+    -10px -10px 0px rgba(0, 0, 0, 0.8), /* Sombra sólida para o lado oposto */
+    -10px -10px 15px rgba(0, 0, 0, 0.5); /* Sombra difusa para profundidade */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Bordas finas e translúcidas */
+}
+
+
+.container header {
+  color: #b2b2b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: 2rem;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header .column span {
+  font-weight: 500;
+  margin-right: 10px;
+  font-size: 1.19rem;
+}
+
+select {
+  padding: 2px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 15px;
+  width: 12rem;
+  height: 2rem;
+  font-size: 0.8rem;
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+#notesDisplay {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #f0f0f0b0;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Quando a nota a ser pressionada é exibida */
+#notesDisplay.active {
+  background-color: #b2b2b2;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Quando a música termina */
+#notesDisplay.completed {
+  background-color: #4b4b4b;
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+.butons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+button {
+  margin: 2px;
+  padding: 5px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#playButton {
+  background-color: #333;
+  color: white;
+}
+
+#stopButton {
+  background-color: #333;
+  color: white;
+}
+
+.volume-slider input {
+  accent-color: #fff;
+}
+
+.keys-check input {
+  width: 60px;
+  height: 30px;
+  appearance: none;
+  border-radius: 30px;
+  background-color: #4b4b4b;
+  cursor: pointer;
+  position: relative;
+}
+
+.keys-check input::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #8c8c8c;
+  top: 50%;
+  left: 0.3rem;
+  border-radius: inherit;
+  position: absolute;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-check input:checked::before {
+  left: 2.1rem;
+  background-color: #fff;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 40px;
+}
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  color: #a2a2a2;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .white {
+  width: 90px;
+  height: 230px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.piano-keys .black {
+  width: 45px;
+  height: 160px;
+  z-index: 2;
+  margin: 0 -22px 0 -22px;
+  border: 1px solid black;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+
+.piano-keys span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.13rem;
+}
+
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom #fff 0%, #eee 100%);
+}
+
+.piano-keys .black.active {
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom #000, #434343);
+}
+
+.piano-keys .key.hide span {
+  display: none;
+}
+
+/* Estiliza o rodapé da página */
+footer {
+  background-color: #8c8c8c; /* Cor de fundo do rodapé */
+  
+  text-align: center; /* Alinha o texto ao centro */
+  padding: 10px; /* Espaçamento interno */
+  width: 100%; /* Largura total */
+  position: fixed; /* Mantém o rodapé fixo na parte inferior */
+  bottom: 0; /* Posiciona na parte inferior da página */
+  left: 0; /* Alinha à esquerda */
+  font-size: 0.8rem; /* Tamanho da fonte */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+}
+
+/* Estiliza o parágrafo dentro do rodapé */
+footer p {
+  margin-top: 10px; /* Margem superior */
+  font-size: 0.8rem; /* Tamanho da fonte */
+  color: #fff; /* Cor do texto */
+}
+
+/* Estiliza o conteúdo do rodapé */
+.footer-content {
+  display: flex; /* Usa flexbox para organizar o conteúdo */
+  justify-content: space-between; /* Espaça o conteúdo igualmente */
+  align-items: center; /* Alinha os itens verticalmente */
+  width: 90%; /* Largura do conteúdo do rodapé */
+  margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estiliza os parágrafos dentro do conteúdo do rodapé */
+.footer-content p {
+  margin: 0; /* Remove a margem padrão */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estiliza os ícones sociais dentro do rodapé */
+.social {
+  display: flex; /* Usa flexbox para organizar os ícones */
+  gap: 1rem; /* Espaço entre os ícones */
+  color: #fff; /* Cor dos ícones sociais */
+}
+
+/* Estiliza as imagens dos ícones sociais */
+.social a img {
+  width: 25px; /* Largura dos ícones */
+  height: 25px; /* Altura dos ícones */
+}
+
+/* Estilo base para a tooltip */
+.tooltip {
+  position: relative; /* Necessário para posicionar o texto corretamente */
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden; /* Esconde a tooltip por padrão */
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+  color: #fff; /* Cor do texto */
+  text-align: center;
+  border-radius: 4px; /* Bordas arredondadas */
+  padding: 5px;
+  position: absolute; /* Posiciona o texto em relação ao ícone */
+  bottom: 125%; /* Afasta o texto acima do ícone */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 1;
+  white-space: nowrap; /* Evita quebra de linha */
+  font-size: 12px; /* Tamanho do texto */
+}
+
+/* Pequena seta para a tooltip */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Alinha a seta com o ícone */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px; /* Tamanho da seta */
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent; /* Define a cor e bordas */
+}
+
+/* Exibe a tooltip ao passar o mouse */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1; /* Suaviza a exibição */
+  transition: opacity 0.2s ease-in-out;
+}
+

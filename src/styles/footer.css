@@ -1,0 +1,91 @@
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #8c8c8c; /* Cor de fundo do rodapé */
+    
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 10px; /* Espaçamento interno */
+    width: 100%; /* Largura total */
+    position: fixed; /* Mantém o rodapé fixo na parte inferior */
+    bottom: 0; /* Posiciona na parte inferior da página */
+    left: 0; /* Alinha à esquerda */
+    font-size: 0.8rem; /* Tamanho da fonte */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+  }
+  
+  /* Estiliza o parágrafo dentro do rodapé */
+  footer p {
+    margin-top: 10px; /* Margem superior */
+    font-size: 0.8rem; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+  }
+  
+  /* Estiliza o conteúdo do rodapé */
+  .footer-content {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    justify-content: space-between; /* Espaça o conteúdo igualmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 90%; /* Largura do conteúdo do rodapé */
+    margin: 0 auto; /* Centraliza o conteúdo */
+  }
+  
+  /* Estiliza os parágrafos dentro do conteúdo do rodapé */
+  .footer-content p {
+    margin: 0; /* Remove a margem padrão */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  /* Estiliza os ícones sociais dentro do rodapé */
+  .social {
+    display: flex; /* Usa flexbox para organizar os ícones */
+    gap: 1rem; /* Espaço entre os ícones */
+    color: #fff; /* Cor dos ícones sociais */
+  }
+  
+  /* Estiliza as imagens dos ícones sociais */
+  .social a img {
+    width: 25px; /* Largura dos ícones */
+    height: 25px; /* Altura dos ícones */
+  }
+  
+  /* Estilo base para a tooltip */
+  .tooltip {
+    position: relative; /* Necessário para posicionar o texto corretamente */
+    display: inline-block;
+  }
+  
+  .tooltip-text {
+    visibility: hidden; /* Esconde a tooltip por padrão */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 5px;
+    position: absolute; /* Posiciona o texto em relação ao ícone */
+    bottom: 125%; /* Afasta o texto acima do ícone */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 1;
+    white-space: nowrap; /* Evita quebra de linha */
+    font-size: 12px; /* Tamanho do texto */
+  }
+  
+  /* Pequena seta para a tooltip */
+  .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Alinha a seta com o ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px; /* Tamanho da seta */
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent; /* Define a cor e bordas */
+  }
+  
+  /* Exibe a tooltip ao passar o mouse */
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1; /* Suaviza a exibição */
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  
